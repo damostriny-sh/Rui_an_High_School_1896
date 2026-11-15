@@ -30,7 +30,7 @@
 | S1-02 | — | 独立审查前期三份文档 | 审查意见：矛盾、范围、玩家决策、视觉偏移 | Reviewer（未参与写作的会话或人） | — | 意见逐条写入提案文档的 Self-review，或在 Lead 回复中列出 | 未开始 |
 | S1-03 | WP1 | “Two trays” 纸面与实物测试：纸托盘、三个杯子、硬币当重量，一人扮演手 | Rules sheet v1；测试记录（至少 3 名测试者先做了什么、为什么） | Design（Claude）准备材料与记录表；用户主持 | D010 | 测试者不经提示找到“合并”或“对置”，并能说明为何有效；完整记录猜测与离开两条路 | 进行中：测试套件已备好（docs/04_playtest/WP1_TWO_TRAYS_TABLETOP.md），待用户组织测试 |
 | S1-04 | WP1 | 平面交互样机：同一遭遇、计时横扫 | 可在浏览器中操作的样机；第二组数据无需改代码即可运行 | Design（Claude） | S1-03 的第一轮记录 | 所有路线（理解、较长的正确路线、猜测、离开）都能走完；每场只产生一个结果 | 未开始 |
-| S1-05 | WP2 | 引擎选择与空工程，建立 Git（大文件用 LFS） | 能构建空场景的工程；TECH_ARCHITECTURE.md v0（引擎与版本、目录、数据约定、状态与结果接口名） | Lead 决策；实施者待定；用户确认引擎 | — | 在用户电脑上构建一次成功；版本号记录在 TECH_ARCHITECTURE.md | 进行中：技术栈已采用（D020）；TECH_ARCHITECTURE.md v0、.gitignore、.gitattributes 已备好；待用户按 §9 安装、建空工程、构建并推送 |
+| S1-05 | WP2 | 引擎选择与空工程，建立 Git（大文件用 LFS） | 能构建空场景的工程；TECH_ARCHITECTURE.md v0（引擎与版本、目录、数据约定、状态与结果接口名） | Lead 决策；实施者待定；用户确认引擎 | — | 在用户电脑上构建一次成功；版本号记录在 TECH_ARCHITECTURE.md | 待验收：11-15 在用户电脑上构建成功（Windows 64 位，SampleScene，0 错误 0 警告，58 秒）；版本号已记入 TECH_ARCHITECTURE.md §1，过程记录见 §9.1；首次提交 af86f95 已推送到公开仓库 github.com/damostriny-sh/Rui_an_High_School_1896。遗留：引擎为用户选定的 Unity 6.6（6000.6.9f1），不是 D020 的 6.3 LTS，需 Lead 在决策记录中修订；FMOD for Unity 未安装 |
 | S1-06 | WP4（前半） | 意识空间锚点、两侧肢体堆与相机：无材质灰盒 | 灰盒场景；五个视角截图与原画并列 | 实施者（待定），用户审美验收 | S1-05；托盘区尺寸等 S1-03 | 用户确认五个视角下肢体都读作手臂和手 | 未开始 |
 | S1-07 | 叙事 | 切片文本：几句台词、四种作业纸状态、两个痕迹的放置表 | 一页文本；四张作业纸图；道具放置表 | Design（Claude）；用户确认语气 | D010、D012 | 用户朗读一遍，没有一句像说教 | 待验收：docs/02_design_proposals/preproduction/SLICE_NARRATIVE.md 与 worksheets/（中英各四张，占位图） |
 | S1-08 | 美术（W2） | 陶舍现实房间配方：观察、与原画的对应、尺度、布局、相机、晚间光色、最小资产 | SCENE_TAOSHE_ROOM.md | Design（Claude）；用户审美确认 | D012 | 用户确认布局与光色方向；§7 三项内容由用户决定 | 待验收 |

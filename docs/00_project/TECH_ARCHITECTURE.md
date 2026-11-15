@@ -1,29 +1,29 @@
 # TECH_ARCHITECTURE — v0
 
-Status: **stack adopted 15 Nov 2026 (D020); nothing has been built yet.** S1-05 is accepted only when the empty project builds once on the owner's machine and the exact versions are recorded in §1.
+Status: **stack adopted 15 Nov 2026 (D020). Empty project built once on the owner's machine on 15 Nov 2026; versions recorded in §1, setup record in §9.1.** The owner chose Unity 6.6 instead of the 6.3 LTS in D020; the Lead should record that change in the decision log. S1-05 awaits the Lead's acceptance.
 Stack from the Lead's recommendation as relayed by the owner, amended the same day with an art-pipeline stack (D021, §10). Structure, contracts and review notes by Claude. Items marked **[Proposal]** are not yet decided.
 
 ---
 
 ## 1. Stack
 
-| Area | Choice | Version to record at setup | Note |
+| Area | Choice | Version recorded at setup (15 Nov 2026) | Note |
 |---|---|---|---|
-| Engine | Unity 6 | **6.3 LTS**, exact patch: ____ | 6.3 LTS is supported to December 2027; 6.0 LTS support ended October 2026 (Unity release page). Use 6.3 LTS, not 6.0 |
+| Engine | Unity 6 | **6000.6.9f1 (Unity 6.6)**, revision 8c45277fb9c5. Unity Hub 4.0.0 | D020 specified 6.3 LTS (supported to December 2027). The owner chose 6.6 at setup on 15 Nov 2026; 6.6 is not an LTS release. **To be recorded by the Lead as an amendment to D020** |
 | Licence | Unity Personal | — | Free under US$200k revenue and funding in the last 12 months (Unity support) |
-| Rendering | URP, Shader Graph, custom HLSL | URP: ____ | Reality toon look and Gray Space graphite look are both URP materials. HLSL only where Shader Graph can't do it. Detail in §10 |
-| Modelling | Blender | ____ | Environment and hand assets; §10 |
+| Rendering | URP, Shader Graph, custom HLSL | URP 17.6.0, Shader Graph 17.6.0 | Reality toon look and Gray Space graphite look are both URP materials. HLSL only where Shader Graph can't do it. Detail in §10 |
+| Modelling | Blender | 5.3.0 | Environment and hand assets; §10 |
 | Language | C# | — | |
-| Camera | Cinemachine | ____ | Follow camera, plus authored views for entry and Study |
-| Animation | Animator, Animation Rigging | ____ | Rigging for hand IK: reaching, gripping, pointing |
-| Input | Input System | ____ | Actions only; no screen asks for a specific key |
+| Camera | Cinemachine | 6.6.0 | Follow camera, plus authored views for entry and Study |
+| Animation | Animator, Animation Rigging | Animation Rigging 6.6.0 | Rigging for hand IK: reaching, gripping, pointing |
+| Input | Input System | 1.20.1 | Actions only; no screen asks for a specific key |
 | AI | HFSM; NavMesh deferred | — | See §2 |
 | Encounters | Custom C# encounter system | — | The stack calls this "modular combat system"; see §2 |
 | Data | ScriptableObject | — | Authored content only; runtime state is plain C# (§6) |
 | Scenes | Additive scene loading | — | §4 |
-| Audio | FMOD Studio + FMOD for Unity | ____ | Free Indie licence covers projects with a development budget under US$600k; register the project in your FMOD profile (fmod.com/licensing) |
-| Version control | Git + Git LFS on GitHub | Git ____, LFS ____ | §8 |
-| Testing | Unity Test Framework | ____ | Edit-mode tests for rules; play-mode tests for scene flow |
+| Audio | FMOD Studio + FMOD for Unity | **Not installed yet** (needs the owner's FMOD account) | Free Indie licence covers projects with a development budget under US$600k; register the project in your FMOD profile (fmod.com/licensing) |
+| Version control | Git + Git LFS on GitHub | Git 2.55.0.windows.3, LFS 3.7.1, GitHub CLI 2.104.0 | §8. Repository: https://github.com/damostriny-sh/Rui_an_High_School_1896 (public) |
+| Testing | Unity Test Framework | 1.8.0 | Edit-mode tests for rules; play-mode tests for scene flow |
 | AI development | Claude Fable 5.2 | — | Whoever implements must be able to open Unity and run builds and tests on the owner's machine. The chat session that wrote this document cannot |
 
 Not yet chosen, and not needed for the slice: localisation package, UI framework (UI Toolkit or uGUI), save format.
@@ -141,6 +141,25 @@ ScriptableObjects hold authored content and are never written at runtime. The se
 6. Build the empty scene once for Windows. Record every version number in §1.
 7. In the project folder: `git init`, `git add .`, `git commit -m "S1-05: empty Unity 6.3 project"`. Create a **private** GitHub repository and push.
 8. Tell the Lead it's done, with the build result and the versions. S1-05 is then accepted.
+
+### 9.1 Setup record, 15 Nov 2026
+
+Carried out by Claude on the owner's machine, with the owner installing Unity Hub and the editor and logging in to GitHub.
+
+| Step | Result |
+|---|---|
+| 1. Git, LFS | Already installed; `git lfs install` run |
+| 2. Unity | Unity Hub 4.0.0; editor 6000.6.9f1 in `D:\Unity\Hub\Editor\`, with Windows build support. **Not 6.3 LTS** (see §1) |
+| 3. Project | Created in `Game\` from the Universal 3D template (`com.unity.template.urp-blank-17.2.6`) in batch mode |
+| 4. Blender | 5.3.0 in `C:\Program Files\Blender Foundation\Blender 5.3\` (replaced the owner's 5.1.0 in `D:\Blender\`) |
+| 5. Packages | Cinemachine, Animation Rigging and Test Framework added; Input System came with the template. **FMOD for Unity not installed** |
+| 6. Build | Windows 64-bit, scene `Assets/Scenes/SampleScene.unity`: `Build Finished, Result: Success`, 0 errors, 0 warnings, 58 s, 104.6 MB, output `Game\Build\Windows\Game.exe` (git-ignored). The built player was not launched |
+| 7. Git | First commit `af86f95` on `main`: 113 files, 23 in LFS (53 MB). Pushed to GitHub; the repository was created private and made public at the owner's request |
+
+Notes for the Lead:
+- `Game/Assets/_Project/Editor/S105Setup.cs` adds the packages and runs the Windows build from the command line. It is not in the §3 folder plan; keep or delete.
+- Unity's log warned that it could not verify the Hub 4.0 licensing client's signature and that an access token was unavailable. Licensing still resolved and every run finished; watch for it on later builds.
+- §9 step 7 says the repository is private; it is now public, so the reference photos in `reference/` and the documents are publicly visible.
 
 ## 10. Art pipeline stack (D021)
 
