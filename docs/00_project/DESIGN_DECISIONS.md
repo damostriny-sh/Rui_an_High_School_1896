@@ -1,0 +1,27 @@
+# 决策记录
+
+| 编号 | 状态 | 决策与依据 |
+|---|---|---|
+| D001 | 已确认 | 用户拥有最终决定权；ChatGPT 统筹全流程。 |
+| D002 | 已确认 | HUD 设计交接完成，保留校园界面视觉；尚未落地。 |
+| D003 | 已确认 | 首个空间样板采用 sipping_mountain_front；周围形体是肢体。 |
+| D004 | 已确认 | 采用用户重新提供的旧输出所述石墨超现实视觉语法；不继承其中与最新设定冲突的灰色现实校园等示例。 |
+| D005 | 已修正 | Claude 不应仅被限制为执行者：前期承担创意发散与方案设计，经过收敛再执行。ChatGPT 仍统一协调。 |
+| D006 | 暂缓 | 工程、样板和校园循环的实现任务暂停，先建立整体理解、创意路线和生产流程。 |
+| D007 | 候选 | 加法消元只是可检验的首战候选，可在前期比较中修改；尚未验证或批准实施。 |
+| D008 | 当前任务 | Claude 执行 CLAUDE_PREPRODUCTION_BRIEF.md，不执行 deferred 或 archive 文件。 |
+| D009 | 路线参考已整合 | 用户补充旧生产路线稿作为参考；现行顺序与分工见 PRODUCTION_ROADMAP.md。修正切片/核心循环顺序，不沿用未经验证的排期或示例功能。当前仍为前期设计。 |
+| D010 | 已确认（用户，11-15） | 遭遇采用 Route A（一道题 = 一个可行走、可操作的房间，步行节奏，无反应型战斗）；Route B 的回合制考试分诊留待以后作为“考试”的形态。来源：CREATIVE_PROPOSAL.md 首表第 1 项。 |
+| D011 | 已确认（用户，11-15） | 让手松开、不还击而取胜，仍是想要的“战斗”。题目是被回答，而不是被杀死。 |
+| D012 | 已确认（用户，11-15） | sipping_mountain_front 对应陶舍（Taoshe）茶室（inside_the_taoshe_building.JPG）；学生在此学习合理。首个切片的现实侧即陶舍（Taoshe）茶室。 |
+| D013 | 已确认（Claude，用户授权，可随时推翻） | 题目始终是“由手托住的物件排列”，不做怪物/生物。取代 GAME_MASTER 中“拟人化或拟物化”的二选一，统一为拟物化。 |
+| D014 | 已确认（Claude，用户授权，可随时推翻） | 学生在意识空间中保留一抹低饱和的现实色彩，作为其中唯一的饱和色；在外观测试中复核。 |
+| D015 | 已完成 | D008 的前期任务已交付：docs/02_design_proposals/preproduction/ 下三份文档。仍为提案，除 D010–D014 外未获批准；尚未经独立审查。 |
+| D016 | 已确认（用户，11-15） | 路线图 W3–W6 原型任务中的“轻攻击、闪避、敌人状态机”与 D010/D011 冲突，不执行；原型阶段改按 PRODUCTION_PIPELINE.md 的 WP1–WP9。路线图其余阶段、关卡门槛和 16 周验收继续有效。 |
+| D017 | 已确认（用户，11-15） | 路线图文件名与现有文件对应：GAME_BIBLE = GAME_MASTER.md，ART_BIBLE = ART_DIRECTION.md，DECISION_LOG = 本文件；新增 CURRENT_SPRINT.md 与根目录 CLAUDE.md；TECH_ARCHITECTURE.md 由 WP2 产出，此前不建空文件。不重复建立同一内容的第二份文件。 |
+| D018 | 仍开放 | 每个意识空间房间是否必须源自一张作者原画；各工作包的实施者。 |
+| D019 | 已确认（用户，11-15） | COMBAT_PROTOTYPE_01.md、docs/04_deferred/、docs/90_archive/ 已作废，不再恢复。文档中对它们的提及仅为历史记录。 |
+| D020 | 已采用（用户转交的 Lead 方案，11-15） | 技术栈：Unity 6（取 6.3 LTS）、URP + Shader Graph + HLSL、C#、Cinemachine、Animator + Animation Rigging、Input System、HFSM（NavMesh 暂缓）、自研 C# 遭遇系统、ScriptableObject、叠加场景加载、FMOD、Git + GitHub（LFS）、Unity Test Framework；AI 开发使用 Claude Fable 5.2。细节与审查意见见 TECH_ARCHITECTURE.md。 |
+| D021 | 已采用（用户，11-15，补充 D020） | 美术管线技术栈：Shader Graph（石墨材质、排线、描边）、自定义 HLSL（屏幕空间铅笔、扭曲、故障）、Cinemachine（第三人称、构图区）、Blender（低面数环境、巨手资产）、ScriptableObject（场景蓝图、美术风格配置）；Claude Fable 5.2 负责美术分析、场景蓝图、着色器、工具开发与截图审查。D020 其余部分不变。审查意见（屏幕空间铅笔不能成为主要风格来源；扭曲只用于世界切换；“故障”与纸张语言冲突，建议改为纸面式效果，待用户决定）见 TECH_ARCHITECTURE.md §10。 |
+
+下一决策：Lead 为 CURRENT_SPRINT.md 中的任务指定实施者；WP1 桌面测试（docs/04_playtest/）结果出来后决定是否进入引擎灰盒。没有实际审批、运行或试玩证据时，不把状态改为已批准实施或已验证。

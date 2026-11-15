@@ -1,0 +1,47 @@
+# Unity project lives in Game/ (see docs/00_project/TECH_ARCHITECTURE.md §3)
+/Game/[Ll]ibrary/
+/Game/[Tt]emp/
+/Game/[Oo]bj/
+/Game/[Bb]uild/
+/Game/[Bb]uilds/
+/Game/[Ll]ogs/
+/Game/[Uu]ser[Ss]ettings/
+/Game/[Mm]emoryCaptures/
+/Game/[Rr]ecordings/
+
+# IDE and generated project files
+/Game/.vs/
+/Game/.idea/
+/Game/.vscode/
+/Game/*.csproj
+/Game/*.sln
+/Game/*.slnx
+/Game/*.user
+/Game/*.pidb
+/Game/*.booproj
+/Game/*.svd
+/Game/*.pdb
+/Game/*.mdb
+/Game/*.opendb
+/Game/*.VC.db
+
+# Unity crash and build artefacts
+/Game/sysinfo.txt
+/Game/crashlytics-build.properties
+*.apk
+*.aab
+*.unitypackage
+
+# FMOD: keep the Studio project and built banks; ignore caches
+**/.cache/
+**/.user/
+*.fspro.lock
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Blender backups
+*.blend1
+*.blend2
