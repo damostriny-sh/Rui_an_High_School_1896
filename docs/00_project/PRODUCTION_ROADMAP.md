@@ -1,3 +1,19 @@
+# 开发路线图
+
+## 现行阶段与依赖
+
+| 阶段 | 依据与出口 |
+|---|---|
+| W1–W2 前期 | [冲刺表](CURRENT_SPRINT.md)维护任务和证据，出口为可执行的设计规格。 |
+| W3–W6 原型 | D016 采用 [WP 工作包](../02_design_proposals/preproduction/PRODUCTION_PIPELINE.md)替代原型周表。按工作包门槛启动。 |
+| 小切片 WP9 | 验证陶舍、意识空间遭遇、回归、自由时段及次日反馈。其范围见[切片提案](../02_design_proposals/preproduction/FIRST_SLICE_DESIGN.md)。 |
+| W7–W16 垂直切片 | 以原稿 §七八项验收为准。早期范例中的教学楼、敌人和 Boss 等实现细节属历史规划，具体内容需要用户裁定。WP9 后规划完整一天、跨房间复用与存读档。 |
+| W17 起 | 生产、Alpha、Beta、发行阶段及关卡门槛见原稿 §二。W16 未通过时按 D016 和原门槛复盘。 |
+
+项目目录和旧文件别名见 [README](../../README.md)，AI 工作权限见 [AGENTS.md](../../AGENTS.md)。下文保存旧计划的估算、周表、验收及协作示例，供追溯。正式任务状态由冲刺表维护。
+
+## 原稿存档
+
 > **整理说明（2026-11-15，Claude 应用户要求整理）**
 > - 本文件保留用户提供的路线图原文。仅把三张导出失效的流程图（原为大段 CSS 代码）改写为可读的 Mermaid 图，并删去一个乱码字符；文字内容未改。
 > - 与之后的决定冲突处，以决策记录为准：前期阶段 Claude 的角色见 D005；W3–W6 的“轻攻击、闪避、敌人状态机”按 D016 不执行，改按 PRODUCTION_PIPELINE.md 的工作包；文件名对应见 D017（GAME_BIBLE = GAME_MASTER.md，ART_BIBLE = ART_DIRECTION.md，DECISION_LOG = DESIGN_DECISIONS.md）。

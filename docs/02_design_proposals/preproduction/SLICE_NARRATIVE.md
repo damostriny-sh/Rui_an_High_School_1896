@@ -1,5 +1,7 @@
 # SLICE_NARRATIVE — outline and text for the first slice
 
+> Scope: read-aloud draft and worksheet assets. Confirm resource outcomes in the slice rules before approving dialogue coverage. Review the reachable Q1 blank / Q2 solved branch and whether trial numbers are generic or reproduced.
+
 Sprint task: S1-07 (also covers the roadmap's W2 "narrative outline" at slice scale). Status: **proposal, awaiting the owner's read-aloud check.** Author: Claude, 15 Nov 2026.
 Built on `FIRST_SLICE_DESIGN.md` §3 and §5 and decisions D010–D012. Labels: **[Confirmed]**, **[Proposal]**.
 

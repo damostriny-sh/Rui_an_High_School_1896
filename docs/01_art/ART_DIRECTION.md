@@ -1,5 +1,7 @@
 # 艺术方向基线
 
+> 用途：双世界实机视觉方向和审美验收。D003/D012 固定陶舍样板的原图及人体结构，D014 固定样板学生的低饱和色。插画创作方法见 [STYLE_GENOME.md](STYLE_GENOME.md)，运行时方案见 [TECH_ARCHITECTURE.md](../00_project/TECH_ARCHITECTURE.md) §10。
+
 状态：根据用户指定的两份旧输出恢复的视觉理解。与最新用户指示冲突时，以最新指示为准。
 
 ## 核心

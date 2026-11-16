@@ -1,5 +1,7 @@
 # 决策记录
 
+> 用途：记录授权来源及替代关系。D006 的暂停为当时安排，现行任务见冲刺表。D008 已由 D015 关闭。D013 替代拟人化选项，D016 替代旧原型周任务，D023 仅修订 D020 的引擎版本。决策采用、工程验证、用户验收分别记录。
+
 | 编号 | 状态 | 决策与依据 |
 |---|---|---|
 | D001 | 已确认 | 用户拥有最终决定权；ChatGPT 统筹全流程。 |
@@ -23,5 +25,12 @@
 | D019 | 已确认（用户，11-15） | COMBAT_PROTOTYPE_01.md、docs/04_deferred/、docs/90_archive/ 已作废，不再恢复。文档中对它们的提及仅为历史记录。 |
 | D020 | 已采用（用户转交的 Lead 方案，11-15） | 技术栈：Unity 6（取 6.3 LTS）、URP + Shader Graph + HLSL、C#、Cinemachine、Animator + Animation Rigging、Input System、HFSM（NavMesh 暂缓）、自研 C# 遭遇系统、ScriptableObject、叠加场景加载、FMOD、Git + GitHub（LFS）、Unity Test Framework；AI 开发使用 Claude Fable 5.2。细节与审查意见见 TECH_ARCHITECTURE.md。 |
 | D021 | 已采用（用户，11-15，补充 D020） | 美术管线技术栈：Shader Graph（石墨材质、排线、描边）、自定义 HLSL（屏幕空间铅笔、扭曲、故障）、Cinemachine（第三人称、构图区）、Blender（低面数环境、巨手资产）、ScriptableObject（场景蓝图、美术风格配置）；Claude Fable 5.2 负责美术分析、场景蓝图、着色器、工具开发与截图审查。D020 其余部分不变。审查意见（屏幕空间铅笔不能成为主要风格来源；扭曲只用于世界切换；“故障”与纸张语言冲突，建议改为纸面式效果，待用户决定）见 TECH_ARCHITECTURE.md §10。 |
+| D022 | 已确认（用户，11-15） | 项目文件夹改名为 Rui_an_High_School_1896；参考图文件名去掉撇号。游戏名称 Rui'an High School 1896 不变。新文件名只用字母、数字、_ 和 -。 |
+| D023 | 已确认（用户，11-15，修订 D020） | 引擎版本为 Unity 6.6（6000.6.9f1），不是 6.3 LTS。6.6 是受支持版本，修复持续到下一版本 6.7（Unity 计划于 2026 年第四季度发布的 LTS）。6.7 LTS 发布后、进入内容生产前升级，先在分支上测试。 |
+| D024 | 已确认（用户，11-15） | GitHub 仓库 damostriny-sh/Rui_an_High_School_1896 设为公开。用户原画、校园照片与全部文档均公开可见。 |
 
 下一决策：Lead 为 CURRENT_SPRINT.md 中的任务指定实施者；WP1 桌面测试（docs/04_playtest/）结果出来后决定是否进入引擎灰盒。没有实际审批、运行或试玩证据时，不把状态改为已批准实施或已验证。
+
+## 文档治理整理的采用范围
+
+用户已批准按审计建议整理项目文档。项目入口和正式规范以仓库路径和决策编号交叉引用；模型权限及工作流程见 [AGENTS.md](../../AGENTS.md)。采用 WP9 与 W16 两级验收，W16 既有门槛继续以 D016 和路线图为依据。WP1 的测试变体、HUD 细节、校徽、书法、环境声及扩展房间视觉选择需要各自的试玩或审美依据，继续列为开放项。

@@ -1,6 +1,6 @@
 > **Status: COMPLETED and handed off, 15 Nov 2026** (see DESIGN_DECISIONS.md D015). Kept as the record of the task. Do not execute it again. The current work is in docs/00_project/CURRENT_SPRINT.md.
 
-# Current task: creative preproduction and a practical production pipeline
+# Completed task: creative preproduction and a practical production pipeline
 
 You are participating in Rui'an_High_School_1896. The user is the author and final decision-maker. ChatGPT coordinates production, integrates design, writes task briefs, and leads technical review. Your role for THIS phase is creative lead and design contributor, not merely an implementation agent.
 

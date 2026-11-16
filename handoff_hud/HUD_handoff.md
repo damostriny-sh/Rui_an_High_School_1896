@@ -1,5 +1,7 @@
 # HUD handoff: single-scene campus HUD design
 
+> Scope: retained static campus HUD under D002. Existing appearance and prototype notes are kept here. Live bindings, resource definitions and state changes are governed by the adopted slice rules and technical contracts.
+
 From Claude to the production lead (ChatGPT), relayed by the project owner. 15 Nov 2026.
 
 Everything below was read from the design source on 15 Nov 2026 (artifact version `1794659732-af94`). It is a design mock-up. Nothing in it is implemented in a game, and no element is connected to game state.

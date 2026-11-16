@@ -1,6 +1,6 @@
 # Rui'an High School 1896
 
-当前阶段：前期收尾（路线图 Pre-production，W1–W2）。前期创意设计已交付，用户已选定 Route A；当前任务见冲刺文件。尚未开始工程实现。
+当前阶段：前期收尾（路线图 Pre-production，W1–W2）。前期创意设计已交付，用户已选定 Route A；当前任务见冲刺文件。Unity 空工程已通过 Windows 构建。玩法原型按冲刺验收门槛推进。
 
 ## 阅读入口
 
@@ -10,7 +10,8 @@
 4. [艺术方向](docs/01_art/ART_DIRECTION.md)：意识空间视觉语法。
 5. [制作路线图](docs/00_project/PRODUCTION_ROADMAP.md)：从前期到发布的阶段、分工与验收门槛。
 6. [前期设计提案](docs/02_design_proposals/preproduction/)：创意提案、首个切片设计、生产流程。
-7. [CLAUDE.md](CLAUDE.md)：Claude 的工作规程。
+7. [共同 AI 协作规则](AGENTS.md)与 [Claude 入口](CLAUDE.md)。
+8. [风格语法](docs/01_art/STYLE_GENOME.md)、[WP1 桌测](docs/04_playtest/WP1_TWO_TRAYS_TABLETOP.md)和 [HUD 交接](handoff_hud/HUD_handoff.md)。
 
 ## 路线图文件名对应（D017）
 
@@ -19,7 +20,7 @@
 | GAME_BIBLE.md | docs/00_project/GAME_MASTER.md | 现行 |
 | PRODUCTION_ROADMAP.md | docs/00_project/PRODUCTION_ROADMAP.md | 现行，部分内容按 D016 调整 |
 | ART_BIBLE.md | docs/01_art/ART_DIRECTION.md | 现行 |
-| TECH_ARCHITECTURE.md | docs/00_project/TECH_ARCHITECTURE.md | v0，待空工程构建验证 |
+| TECH_ARCHITECTURE.md | docs/00_project/TECH_ARCHITECTURE.md | v0，空工程已构建，架构提案见正文 |
 | CURRENT_SPRINT.md | docs/00_project/CURRENT_SPRINT.md | Sprint 1 |
 | DECISION_LOG.md | docs/00_project/DESIGN_DECISIONS.md | 现行 |
 | CLAUDE.md | CLAUDE.md | 现行 |
@@ -32,7 +33,7 @@
 |---|---|
 | CLAUDE.md | Claude 工作规程 |
 | .gitignore、.gitattributes | Git 与 LFS 设置，按 Game/ 布局准备 |
-| Game/ | Unity 工程（S1-05 建立后出现） |
+| Game/ | Unity 空工程与构建配置 |
 | docs/00_project/ | 主文档、路线图、冲刺与决策记录，当前权威入口 |
 | docs/01_art/ | 当前艺术方向 |
 | docs/02_design_proposals/preproduction/ | 前期设计提案；Route A 已选定，其余细节待批准 |

@@ -172,7 +172,7 @@ Fill in after all testers:
 | Collapsed | __ / __ | |
 
 **Decision rule** (from PRODUCTION_PIPELINE.md §7):
-- **Go on to the flat mock-up (S1-04) and the engine grey box** if at least 2 of 3 testers found an operation deliberately and could explain it.
+- **Go on to the flat mock-up (S1-04) ** if at least 2 of 3 testers found an operation deliberately and could explain it. Start WP3 engine grey box only after the tabletop and flat mock-up pass and Rules sheet v1 is approved.
 - **Revise the body, then run another round** if most testers reached a placement only by trying both, or only guessed. First fix to try: add a third tray that shares nothing with the other two.
 - **Discuss the form with the owner** if most say "puzzle" or "test question" and that feels wrong. Possible changes: give the player a way to act on the hands themselves, or look again at Route B.
 - **Stop the Gray Space blockout (S1-06) and return to the creative proposal** if two rounds in a row fail the first test.
@@ -194,3 +194,7 @@ Also check:
 - **The grid and the metronome** are paper stand-ins for walking. They make exposure to sweeps countable, but they will feel more deliberate than real-time movement.
 - **One person plays three hands.** The sweep warning is the facilitator's own fist opening, so it may be read from their face as much as from their hand. Watching the tester's eyes helps.
 - **Coin costs** (1 per sweep hit, 2 per wrong guess, 4 to leave, 10 to start) follow the design's ratios, not any tested balance.
+
+## 12. Variants to capture for Rules sheet v1
+
+Record the reason and observed effect of post-combination sweeps, substitution on either tray, Assist timing, Leave elapsed time versus school-time charge, and collapse precedence. Note deliberate combinations, mixed paths and forced guesses separately so the engineering contract can classify outcomes without guessing at player intent.

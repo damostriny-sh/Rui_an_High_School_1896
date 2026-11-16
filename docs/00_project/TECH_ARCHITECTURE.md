@@ -1,6 +1,6 @@
 # TECH_ARCHITECTURE — v0
 
-Status: **stack adopted 15 Nov 2026 (D020). Empty project built once on the owner's machine on 15 Nov 2026; versions recorded in §1, setup record in §9.1.** The owner chose Unity 6.6 instead of the 6.3 LTS in D020; the Lead should record that change in the decision log. S1-05 awaits the Lead's acceptance.
+Status: **stack adopted 15 Nov 2026 (D020). Empty project built once on the owner's machine on 15 Nov 2026; versions recorded in §1, setup record in §9.1.** The owner chose Unity 6.6 instead of 6.3 LTS (D023). S1-05 accepted 15 Nov 2026 on the build evidence in §9.1; FMOD for Unity is still to be installed (S1-09).
 Stack from the Lead's recommendation as relayed by the owner, amended the same day with an art-pipeline stack (D021, §10). Structure, contracts and review notes by Claude. Items marked **[Proposal]** are not yet decided.
 
 ---
@@ -9,7 +9,7 @@ Stack from the Lead's recommendation as relayed by the owner, amended the same d
 
 | Area | Choice | Version recorded at setup (15 Nov 2026) | Note |
 |---|---|---|---|
-| Engine | Unity 6 | **6000.6.9f1 (Unity 6.6)**, revision 8c45277fb9c5. Unity Hub 4.0.0 | D020 specified 6.3 LTS (supported to December 2027). The owner chose 6.6 at setup on 15 Nov 2026; 6.6 is not an LTS release. **To be recorded by the Lead as an amendment to D020** |
+| Engine | Unity 6 | **6000.6.9f1 (Unity 6.6)**, revision 8c45277fb9c5. Unity Hub 4.0.0 | Amends D020 (D023). 6.6 is a Supported release: it gets fixes until the next release, 6.7, which Unity has scheduled as the next LTS for Q4 2026. Plan: stay on 6.6 and move to 6.7 LTS once it ships and before content production starts, testing the upgrade on a branch |
 | Licence | Unity Personal | — | Free under US$200k revenue and funding in the last 12 months (Unity support) |
 | Rendering | URP, Shader Graph, custom HLSL | URP 17.6.0, Shader Graph 17.6.0 | Reality toon look and Gray Space graphite look are both URP materials. HLSL only where Shader Graph can't do it. Detail in §10 |
 | Modelling | Blender | 5.3.0 | Environment and hand assets; §10 |
@@ -37,7 +37,7 @@ The stack fits. Three items are scoped differently from how they're named, becau
 3. **HFSM is for the hands and the game flow**, not for enemy AI in the usual sense: a hand's states are grip, warn (point), sweep and release.
 
 Two further cautions:
-- **FMOD before any audio exists** adds setup cost. That's acceptable if it's installed in S1-05, so audio work never has to migrate later. Keep Unity audio out of the code entirely so there's one audio path.
+- **FMOD before any audio exists** adds setup cost. The Sprint tracks installation separately as S1-09 before the first audio integration package. Keep Unity audio out of the code entirely so there's one audio path.
 - **Paths use plain characters only.** The project folder is `Rui_an_High_School_1896` and file names contain no apostrophes (D022), because some build and command-line tools are fragile with special characters. Keep new file and folder names to letters, digits, `_` and `-`.
 
 ## 3. Repository and folders [Proposal]
@@ -82,6 +82,8 @@ Each folder under `Code/` gets its own assembly definition. `Core` depends on no
 The switch: `Reality_Taoshe` stays loaded but hidden while `Gray_SippingMountain` loads, so the return lands in the same room with props in place. The two rooms are separate scenes so that WP4–WP6 (Gray Space) and WP7 (reality) can be worked on by different people without conflicts (PRODUCTION_PIPELINE §5).
 
 ## 5. Contracts between systems [Proposal]
+
+Before WP3, resolve live health events versus return settlement, the identity of each encounter run, mixed paths, collapse priority and repeated callbacks. Use approved WP1 rules to set behavior and acceptance checks.
 
 Names first, so that WP3, WP7 and WP8 agree before any code is written.
 
@@ -130,8 +132,11 @@ ScriptableObjects hold authored content and are never written at runtime. The se
 - **GitHub LFS quota depends on the account.** GitHub's current billing page lists 10 GiB of storage and 10 GiB a month of bandwidth on GitHub Free, while older pages state 1 GB. Check the figure under your own account's billing settings before the first big push. The reference photos alone are about 65 MB.
 - **Branches:** `main` must always open and build. Each work package gets its own branch and merges after its acceptance evidence is attached.
 - **Commit messages** name the work package: `WP3: ...`.
+- **The repository is public** (D024). Everything committed, including the owner's drawings, the campus photos and all documents, can be seen and downloaded by anyone. There is no licence file, so by default nobody else has the right to reuse it, but that doesn't stop copying. LFS downloads by anyone count against the owner's bandwidth quota.
 
-## 9. Setup steps for S1-05 (owner, about an hour)
+## 9. Historical setup draft for S1-05
+
+These steps preserve the pre-D023 setup draft. For the actual editor, packages and build, use §1 and §9.1.
 
 1. Install **Git** and **Git LFS**, then run `git lfs install` once.
 2. Install **Unity Hub**, then **Unity 6.3 LTS** (latest patch) with *Windows Build Support*.
@@ -139,7 +144,7 @@ ScriptableObjects hold authored content and are never written at runtime. The se
 4. Install **Blender** (current stable release).
 5. Open the Unity project. In Package Manager, add **Cinemachine**, **Input System** (accept the restart), **Animation Rigging**, and **Test Framework** if it's not already present. Install **FMOD for Unity** from FMOD's site or the Asset Store.
 6. Build the empty scene once for Windows. Record every version number in §1.
-7. In the project folder: `git init`, `git add .`, `git commit -m "S1-05: empty Unity 6.3 project"`. Create a **private** GitHub repository and push.
+7. In the project folder: `git init`, `git add .`, `git commit -m "S1-05: empty Unity 6.3 project"`. Create a GitHub repository and push. (The owner chose a public repository; see §8 and D024.)
 8. Tell the Lead it's done, with the build result and the versions. S1-05 is then accepted.
 
 ### 9.1 Setup record, 15 Nov 2026
@@ -192,3 +197,7 @@ Added by the owner on 15 Nov. It extends §1 and replaces none of it: input, ani
 ## 11. Not built in this phase
 
 Save system, localisation, timetable, rank, NavMesh, procedural generation, CI builds. Each is added when a work package needs it, and is recorded here then.
+
+## 12. Build evidence
+
+The local Unity summary is at Game/Library/BuildHistory/20261115-131714Z-005ad2f4/BuildReportSummary.json. It records a successful empty Windows player build in 58.026 seconds, with zero errors and zero warnings. Build history is local evidence under the ignored Unity cache; §9.1 records the evidence in the repository. See CURRENT_SPRINT.md for acceptance and FMOD status.

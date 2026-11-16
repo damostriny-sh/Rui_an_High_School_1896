@@ -1,5 +1,7 @@
 # PRODUCTION_PIPELINE
 
+> 适用范围：D016 采用本文件 WP 顺序替代旧原型任务。旧工具假设、初始状态及目录设想保留为编写时记录。实装版本见技术文档，实时任务状态见冲刺表。
+
 Status: **proposal; Route A selected by the owner on 15 Nov. No work package below has started, apart from the owner's answers under WP0.** Sized for one encounter and one environment (`FIRST_SLICE_DESIGN.md`). Author: Claude. Date: 15 Nov 2026.
 
 ---
@@ -70,7 +72,11 @@ Not proposed at all for now: procedural rooms, trained image models, asset servi
 
 ---
 
-## 5. First work packages (all NOT STARTED)
+## 5. First work packages
+
+WP3 requires passed tabletop and flat mock-up checks, approved Rules sheet v1, and an accepted WP2. Early WP4 work requires separate approval and is limited to anchors, limb stacks and camera. Arena dimensions wait for WP1. WP9 validates the small Taoshe slice; the W16 gate remains in PRODUCTION_ROADMAP.md.
+
+For generated or third-party files imported as project assets, record source, author or generation tool, version, and usage rights on import. Keep exploratory concept references labeled as such, and verify provenance again before shipping. ComfyUI is optional and needs a recorded workflow only when adopted for a reproducible production step.
 
 | ID | Package | Output | Needs | Can run independently? | Acceptance |
 |---|---|---|---|---|---|

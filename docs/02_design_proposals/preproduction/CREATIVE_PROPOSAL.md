@@ -1,5 +1,7 @@
 # CREATIVE_PROPOSAL
 
+> Use this file as creative decision provenance and a proposal. D010–D014 govern the adopted choices. The day and term systems remain proposals and the current slice uses the scope in FIRST_SLICE_DESIGN.md.
+
 Status: **proposal; route and four points decided by the owner on 15 Nov (see the first section); the rest not yet approved**. Author: Claude, creative lead for the preproduction phase. Date: 15 Nov 2026.
 Written against `docs/00_project/GAME_MASTER.md`, `docs/01_art/ART_DIRECTION.md`, `docs/00_project/DESIGN_DECISIONS.md`, the owner's creative-direction prompt of 15 Nov, and `CLAUDE_PREPRODUCTION_BRIEF.md`. Nothing here changes those files.
 

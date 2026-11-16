@@ -1,5 +1,7 @@
 # SCENE_TAOSHE_ROOM — recipe for the reality side of the first slice
 
+> Scope: reality room recipe. D012 confirms the location. Layout, scale, original calligraphy, emblem and sound choices are reviewed as proposals. The paired Gray Space recipe is in FIRST_SLICE_DESIGN.md §7.
+
 Status: **proposal.** Author: Claude, 15 Nov 2026. Fills the gap that `FIRST_SLICE_DESIGN.md` left: §7 covers the Gray Space room only. It also covers part of the roadmap's W2 "Art Bible" item for the reality side.
 Source: `reference/Campus/inside_the_taoshe_building.JPG`, one photo, daytime, one viewpoint. Confirmed as the slice's reality room (D012).
 Labels: **[Observed]** in the photo; **[Estimate]** read from the photo, unmeasured; **[Proposal]** mine.

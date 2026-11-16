@@ -1,5 +1,7 @@
 # FIRST_SLICE_DESIGN
 
+> Scope: Taoshe small-slice proposal, for WP9. Read D010–D014 for adopted choices and use the approved WP1 rules when available for playable encounter mechanics. Leave settlement, recovery versus skipping question 2 and collapse ordering remain open.
+
 Status: **proposal; Route A selected by the owner on 15 Nov; details not yet approved**. Develops Route A from `CREATIVE_PROPOSAL.md` only. Author: Claude. Date: 15 Nov 2026.
 
 Labels: **[Confirmed]**, **[Observed]** (seen in a reference), **[Proposal]**. Every number is a starting value for testing, given as a range where I cannot justify a single figure.
