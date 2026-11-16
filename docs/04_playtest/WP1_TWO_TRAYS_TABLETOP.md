@@ -172,7 +172,7 @@ Fill in after all testers:
 | Collapsed | __ / __ | |
 
 **Decision rule** (from PRODUCTION_PIPELINE.md §7):
-- **Go on to the flat mock-up (S1-04) ** if at least 2 of 3 testers found an operation deliberately and could explain it. Start WP3 engine grey box only after the tabletop and flat mock-up pass and Rules sheet v1 is approved.
+- **Go on to the flat mock-up (S1-04)** if at least 2 of 3 testers found an operation deliberately and could explain it. Start WP3 engine grey box only after the tabletop and flat mock-up pass and Rules sheet v1 is approved.
 - **Revise the body, then run another round** if most testers reached a placement only by trying both, or only guessed. First fix to try: add a third tray that shares nothing with the other two.
 - **Discuss the form with the owner** if most say "puzzle" or "test question" and that feels wrong. Possible changes: give the player a way to act on the hands themselves, or look again at Route B.
 - **Stop the Gray Space blockout (S1-06) and return to the creative proposal** if two rounds in a row fail the first test.
